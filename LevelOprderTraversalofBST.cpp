@@ -1,0 +1,87 @@
+#include <cstdio>
+#include <cstdlib>
+
+struct BSTNode
+{
+    int data;
+    struct BSTNode* left;
+    struct BSTNode* right;
+};
+
+struct BSTNode* getNewNode(int data)
+{
+    struct BSTNode* temp = new BSTNode();
+    temp->data = data;
+    temp->left = NULL;
+    temp->right = NULL;
+    return temp;
+}
+
+struct BSTNode* insert(struct BSTNode* root, int data)
+{
+    if (root == NULL)
+    {
+        root = getNewNode(data);
+    }
+    else if (data < root->data)
+    {
+        root->left = insert(root->left, data);
+    }
+    else
+    {
+        root->right = insert(root->right, data);
+    }
+    return root;
+}
+
+int height(struct BSTNode* root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        int lH = height(root->left);
+        int rH = height(root->right);
+        return  ( (lH > rH) ? lH+1 : rH+1);
+    }
+}
+
+void printGevenOrder(struct BSTNode* root, int level)
+{
+    if (root == NULL)
+        return ;
+
+    if (level == 1)
+    {
+        printf("%d  ", root->data);
+    }
+    else if (level > 1)
+    {
+        printGevenOrder(root->left, level-1);
+        printGevenOrder(root->right, level-1);
+    }
+}
+
+void printLevelOrder(struct BSTNode* root)
+{
+   int ht = height(root);
+   for(int i = 1; i <= ht; i++)
+       printGevenOrder(root, i);
+}
+
+int main()
+{
+    struct BSTNode* root = NULL;
+    root = insert(root, 17);
+    root = insert(root, 19);
+    root = insert(root, 15);
+    root = insert(root, 16);
+    root = insert(root, 18);
+    root = insert(root, 20);
+    root = insert(root, 14);
+    printLevelOrder(root);
+    return 0;
+}
+
