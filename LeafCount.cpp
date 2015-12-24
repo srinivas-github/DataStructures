@@ -34,6 +34,9 @@ struct Node* insert(struct Node* root, int data)
     return root;
 }
 
+/**
+ * Get the Leaf Counts
+ */
 int getLeafCount(struct Node* root)
 {
     if (root == NULL)
