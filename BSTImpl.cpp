@@ -37,6 +37,9 @@ int main()
     return 0;
 }
 
+/**
+ * Creata a new node
+ */
 
 BstNode* getNewNode(int data)
 {
@@ -47,6 +50,9 @@ BstNode* getNewNode(int data)
     return temp;
 }
 
+/**
+ insert node
+ */
 BstNode* insert(BstNode* root, int data)
 {
     if ( root == NULL)
