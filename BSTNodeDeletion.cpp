@@ -18,6 +18,10 @@ BSTNode* findMin(BSTNode* root)
     return root;
 }
 
+/**
+ * function to delete a node
+ */
+
 BSTNode* deleteNode(BSTNode* root, int data)
 {
     if (root == NULL)

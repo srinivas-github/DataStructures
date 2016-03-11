@@ -13,6 +13,11 @@ BstNode* insert(BstNode* root, int data);
 bool search(int data, BstNode* root);
 int maxHeight(BstNode* root);
 
+/**
+ * driver function to test
+ */
+
+
 int main()
 {
     BstNode* root = NULL;
