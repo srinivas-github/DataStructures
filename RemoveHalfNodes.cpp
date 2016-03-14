@@ -8,6 +8,9 @@ struct Node
     struct Node* right;
 };
 
+/**
+ * Get the node
+ */
 struct Node* getNewNode(int data)
 {
     struct Node* temp = new Node();
