@@ -18,6 +18,7 @@
  *    a) Get the middle of the left half and make it left child of the root
  *    b) Get the middle of the right half and make it right child of the root
  * Added this line to demo their changes
+ * Another line to demo ours strategy
  */
 #include <cstdio>
 #include <cstdlib>
