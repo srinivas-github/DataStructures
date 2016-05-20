@@ -17,6 +17,7 @@
  * 2) Recursivley do the same for left half and right half
  *    a) Get the middle of the left half and make it left child of the root
  *    b) Get the middle of the right half and make it right child of the root
+ * Added this line to demo their changes
  */
 #include <cstdio>
 #include <cstdlib>
