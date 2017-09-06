@@ -46,22 +46,31 @@ void reverse(struct Node** headRef)
 
 void frontBackSplit(struct Node* head, struct Node** frontRef, struct Node** backRef)
 {
-    struct Node* slow = head;
-    struct Node* fast = head->next;
+    struct Node* slow;
+    struct Node* fast;
 
-    while (fast != NULL)
+    if (head == NULL || head->next == NULL)
     {
-        fast = fast->next;
-        if (fast != NULL)
-        {
-            slow = slow->next;
-            fast = fast->next;
-        }
+        *frontRef = head;
+        *backRef = NULL;
     }
-
-    *frontRef = head;
-    *backRef = slow->next;
-    slow->next = NULL;
+    else
+    {
+        slow  = head;
+        fast = head->next;
+        while (fast != NULL)
+        {   
+            fast = fast->next;
+            if (fast != NULL)
+            {
+                slow = slow->next;
+                fast = fast->next;
+            }
+        }    
+        *frontRef = head;
+        *backRef = slow->next;
+        slow->next = NULL;
+   }
 }
 
 void modifyContentsOfFirstHalf(struct Node* front, struct Node* back)
