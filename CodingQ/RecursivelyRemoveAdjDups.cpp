@@ -25,7 +25,7 @@ char* removeDups(char* str, int n)
 
 int main()
 {
-    char str1[] = "azxxxzy";
+    char str1[] = "azxxaxzy";
     std::cout<<removeDups(str1, strlen(str1))<<"\n";
     return 0;
 }
