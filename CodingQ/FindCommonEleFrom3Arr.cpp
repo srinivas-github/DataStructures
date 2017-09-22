@@ -9,7 +9,7 @@ void findCommon(int ar1[], int ar2[], int ar3[], int n1, int n2, int n3)
 
     while ( i < n1 && j < n2 && k < n3)
     {
-        if (ar1[i] == ar2[j] && ar2[j] == ar2[k])
+        if (ar1[i] == ar2[j] && ar2[j] == ar3[k])
         {
             printf("%d ", ar1[i++]);
             j++;

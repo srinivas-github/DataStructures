@@ -27,5 +27,8 @@ int main()
 {
     char str1[] = "azxxaxzy";
     std::cout<<removeDups(str1, strlen(str1))<<"\n";
+
+    char str2[] = "seesijkkookk";
+    std::cout<<removeDups(str2, strlen(str2))<<"\n";
     return 0;
 }
