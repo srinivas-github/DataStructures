@@ -4,7 +4,7 @@
  * then O/P:
  * 12->11->21->41->43
  *
- * Method 1: (Using two loops and compare
+ * Method 1: (Using two loops and compare)
  */
 #include <cstdio>
 #include <cstdlib>

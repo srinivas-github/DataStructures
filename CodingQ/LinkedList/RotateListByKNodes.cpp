@@ -1,3 +1,18 @@
+/**
+ * Rotate a Linked List
+ * Given a singly linked list, rotate the linked list counter-clockwise by k nodes.
+ * Where k is a given positive integer. 
+ * For example, if the given linked list is 10->20->30->40->50->60 and k is 4, then
+ * list should be modified to 50->60->10->20->30->40. 
+ * Assume that k is smaller than the count of nodes in linked list.
+ *
+ * Solution:
+ * 1. Change next of kth node to NULL, 
+ * 2. next of last node to previous head node, 
+ * 3. and finally change head to (k+1)th node. 
+ * So we need to get hold of three nodes: kth node, (k+1)th node and last node.
+ */
+
 #include <cstdio>
 #include <cstdlib>
 
