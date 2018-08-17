@@ -16,6 +16,11 @@ struct Queue
 void push(struct SNode** top_ref, int data)
 {
     struct SNode* newNode = (struct SNode*)malloc(sizeof(struct SNode));
+    if (temp == NULL)
+    {
+	    printf("stack underflow\n");
+	    return ;
+    }
     newNode->data = data;
     newNode->next = *top_ref;
     *top_ref = newNode;
@@ -69,6 +74,8 @@ int deQueue(struct Queue* q)
 int main()
 {
     struct Queue* q = (struct Queue*)malloc(sizeof(struct Queue));
+    q->stack1 = NULL;
+    q->stack2 = NULL;
     enQueue(q, 10);
     enQueue(q, 20);
     enQueue(q, 30);
